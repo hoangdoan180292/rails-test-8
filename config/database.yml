@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+
+development:
+  <<: *default
+  database: rails_test_8_smith_development
+
+test:
+  <<: *default
+  database: rails_test_8_smith_test
+
+production:
+  <<: *default
+  database: rails_test_8_smith_production
