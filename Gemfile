@@ -13,6 +13,7 @@ gem 'slim'
 gem 'materialize-sass'
 gem 'simple_form'
 gem 'nested_form'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
