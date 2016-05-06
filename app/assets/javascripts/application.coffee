@@ -1,5 +1,5 @@
 #= require jquery
 #= require jquery_ujs
-#= require jquery
 #= require materialize-sprockets
+#= require bootstrap-sprockets
 #= require jquery_nested_form
