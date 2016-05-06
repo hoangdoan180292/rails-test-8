@@ -13,7 +13,10 @@ gem 'slim'
 gem 'materialize-sass'
 gem 'simple_form'
 gem 'nested_form'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap_flash_messages'
 
 group :development, :test do
   gem 'byebug'
