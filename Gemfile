@@ -12,11 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'materialize-sass'
 gem 'simple_form'
-gem 'nested_form'
 gem 'font-awesome-rails'
-gem 'bootstrap-sass'
-gem 'bootstrap-datepicker-rails'
-gem 'bootstrap_flash_messages'
+gem 'enumerize'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug'

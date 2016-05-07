@@ -37,8 +37,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.6)
-      execjs
     awesome_print (1.6.1)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -46,14 +44,12 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-datepicker-rails (1.6.0.1)
-      railties (>= 3.0)
-    bootstrap-sass (3.3.6)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
-    bootstrap_flash_messages (1.0.2)
     builder (3.2.2)
     byebug (8.2.5)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -69,6 +65,8 @@ GEM
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
       railties (>= 4.0, < 5.1)
+    enumerize (1.1.1)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.7.0)
@@ -102,12 +100,19 @@ GEM
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
+    mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.12.0)
     nested_form (0.3.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    paperclip (4.3.6)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -216,12 +221,10 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
-  bootstrap-datepicker-rails
-  bootstrap-sass
-  bootstrap_flash_messages
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  enumerize
   factory_girl_rails
   font-awesome-rails
   html2slim
@@ -229,6 +232,7 @@ DEPENDENCIES
   jquery-rails
   materialize-sass
   nested_form
+  paperclip
   pg
   pry-rails
   rails (= 4.2.6)
