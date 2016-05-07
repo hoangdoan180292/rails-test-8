@@ -1,3 +1,22 @@
 .shoes-filter-container {
   padding-top: 42px;
+
+  .content {
+    padding-left: 17px;
+
+    p {
+      margin-top: 0;
+
+      &.title {
+        font-weight: 300;
+        font-size: 16px;
+        color: #9599a3;
+      }
+
+      &.label {
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
 }
