@@ -1,5 +1,10 @@
 @import "materialize";
+@import "font-awesome";
+@import "_variables";
+@import "_mixins";
 
 @import "theme";
 
 @import "layouts/_header";
+
+@import "shoes/_block";

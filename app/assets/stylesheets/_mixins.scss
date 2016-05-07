@@ -1,0 +1,114 @@
+@mixin border-radius($value) {
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -o-border-radius: $value;
+  -ms-border-radius: $value;
+}
+
+@mixin box-shadow($box_shadow) {
+  box-shadow: $box_shadow;
+  -webkit-box-shadow: $box_shadow;
+  -moz-box-shadow: $box_shadow;
+}
+
+@mixin awesome($awesome) {
+  content: $awesome;
+  font-family: FontAwesome;
+}
+
+@mixin btn-awesome($awesome) {
+  i:after {
+    @include awesome($awesome);
+
+    margin-left: 8px;
+    font-style: normal;
+  }
+}
+
+@mixin bg-image($bgimage) {
+  background: url(asset_path($bgimage)) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+@mixin appearance_none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@mixin btn($bg) {
+  background-color: $bg;
+
+  @include box-shadow($box_shadow);
+
+  &:hover {
+    background-color: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background-color: darken($bg, 25%);
+  }
+}
+
+@mixin transition($transition) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin select-box-with-icon($backgroundUrl) {
+  position: relative;
+  padding-left: 30px;
+
+  &:before {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    content: url($backgroundUrl);
+  }
+}
+
+@mixin underline-menu {
+  @include transition(all 0.5s ease);
+
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: $orange;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  opacity: 0;
+}
+
+@mixin triangle_Up($width, $color) {
+  height: 0;
+  border-left: ($width + px) solid transparent;
+  border-right: ($width + px) solid transparent;
+  border-bottom: ($width * 2 + px) solid $color;
+}
+
+@mixin border-top-bottom-left-radius($pixel) {
+  border-top-left-radius: $pixel;
+  border-bottom-left-radius: $pixel;
+}
+
+@mixin border-top-bottom-right-radius($pixel) {
+  border-top-right-radius: $pixel;
+  border-bottom-right-radius: $pixel;
+}
+
+@mixin border-top-left-right-radius($pixel) {
+  border-top-left-radius: $pixel;
+  border-top-right-radius: $pixel;
+}
+
+@mixin border-bottom-left-right-radius($pixel) {
+  border-bottom-left-radius: $pixel;
+  border-bottom-right-radius: $pixel;
+}
