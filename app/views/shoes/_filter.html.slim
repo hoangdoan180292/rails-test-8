@@ -11,24 +11,22 @@
 
   coffee:
     $('#new_shoe_filter input').change ->
-      $(this).parents('form').submit()
-
-  javascript:
-    var slider = document.getElementById('slider');
-
-    UiSlider = noUiSlider.create(slider, {
-      start: [0, 200],
-      connect: true,
-      step: 50,
-      range: {
-        'min': 0,
-        'max': 200
-      }
-    })
-
-    UiSlider.on('change', function( values, handle ) {
-      $('#shoe_filter_min_price').val(values[0])
-      $('#shoe_filter_max_price').val(values[1])
-
       $('form#new_shoe_filter').submit()
-    });
+
+    slider = document.getElementById('slider')
+    
+    noUiSlider.create slider,
+      start: [
+        0
+        200
+      ]
+      connect: true
+      step: 50
+      range:
+        'min': 0
+        'max': 200
+
+    slider.noUiSlider.on 'change', (values, handle) ->
+      $('#shoe_filter_min_price').val values[0]
+      $('#shoe_filter_max_price').val values[1]
+      $('form#new_shoe_filter').submit()
