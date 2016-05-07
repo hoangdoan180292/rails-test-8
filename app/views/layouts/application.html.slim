@@ -4,11 +4,13 @@ html
     title
       | Rails test 8
     = stylesheet_link_tag request.protocol+'fonts.googleapis.com/icon?family=Material+Icons'
+    = stylesheet_link_tag request.protocol+'fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
     header
       = render 'layouts/header'
-    = yield
+    main
+      = yield
     = render 'layouts/message'
