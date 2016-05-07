@@ -23,25 +23,25 @@ after :brands do
 
   new_balance.shoes.create([
     {
-      name: "New Balance Men's MX608V4 Training Shoe",
+      name: "New Balance 1",
       sku: "MX608V4",
       price: 77.99,
       picture: File.open(file_MX608V4_path),
     },
     {
-      name: "New Balance Free 4.0 Flyknit Sz 13 Mens Running Shoes",
+      name: "New Balance 2",
       sku: "MX608V5",
       price: 125,
       picture: File.open(file_MX608V5_path),
     },
     {
-      name: "New Balance Flex 2015 Rn Sz 7 Mens Running Shoes",
+      name: "New Balance 3",
       sku: "MX608V6",
       price: 74.99,
       picture: File.open(file_MX608V6_path),
     },
     {
-      name: "New Balance Flex 2015 Rn Sz 7 Mens Running Shoes",
+      name: "New Balance 4",
       sku: "MX608V6",
       price: 74.99,
       picture: File.open(file_MX608V6_path),
@@ -68,7 +68,7 @@ after :brands do
       picture: File.open(file_nike3_path),
     },
     {
-      name: "Nike 3",
+      name: "Nike 4",
       sku: "nike4",
       price: 74.99,
       picture: File.open(file_nike4_path),
@@ -95,7 +95,7 @@ after :brands do
       picture: File.open(file_adidas3_path),
     },
     {
-      name: "Adidas 3",
+      name: "Adidas 5",
       sku: "adidas4",
       price: 74.99,
       picture: File.open(file_adidas4_path),
