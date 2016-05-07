@@ -16,6 +16,7 @@ gem 'font-awesome-rails'
 gem 'enumerize'
 gem 'paperclip'
 gem 'seedbank'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug'
