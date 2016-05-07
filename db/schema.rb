@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507014029) do
+ActiveRecord::Schema.define(version: 20160507021934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "products", force: :cascade do |t|
+  create_table "brands", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shoes", force: :cascade do |t|
     t.string   "name"
     t.string   "sku"
     t.decimal  "price",                precision: 15, scale: 2
@@ -26,6 +32,9 @@ ActiveRecord::Schema.define(version: 20160507014029) do
     t.datetime "picture_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "brand_id"
   end
+
+  add_index "shoes", ["brand_id"], name: "index_shoes_on_brand_id", using: :btree
 
 end
