@@ -5,8 +5,9 @@ after :brands do
     "ALTER SEQUENCE shoes_id_seq RESTART WITH 1"
   )
 
-  new_balance     = Brand.find_by_title('New Balance')
-  nike            = Brand.find_by_title('Nike')
+  new_balance           = Brand.find_by_title('New Balance')
+  nike                  = Brand.find_by_title('Nike')
+  adidas                = Brand.find_by_title('Adidas')
 
   file_MX608V4_path     = "#{Rails.root}/app/assets/images/shoe/image-01.png"
   file_MX608V5_path     = "#{Rails.root}/app/assets/images/shoe/image-02.png"
@@ -15,9 +16,10 @@ after :brands do
   file_nike2_path       = "#{Rails.root}/app/assets/images/shoe/image-05.png"
   file_nike3_path       = "#{Rails.root}/app/assets/images/shoe/image-06.png"
   file_nike4_path       = "#{Rails.root}/app/assets/images/shoe/image-07.png"
-  file_MX609V2_path     = "#{Rails.root}/app/assets/images/shoe/image-08.png"
-  file_MX609V3_path     = "#{Rails.root}/app/assets/images/shoe/image-09.png"
-  file_MX609V4_path     = "#{Rails.root}/app/assets/images/shoe/image-10.png"
+  file_adidas1_path     = "#{Rails.root}/app/assets/images/shoe/image-08.png"
+  file_adidas2_path     = "#{Rails.root}/app/assets/images/shoe/image-09.png"
+  file_adidas3_path     = "#{Rails.root}/app/assets/images/shoe/image-10.png"
+  file_adidas4_path     = "#{Rails.root}/app/assets/images/shoe/image-11.png"
 
   new_balance.shoes.create([
     {
@@ -27,19 +29,19 @@ after :brands do
       picture: File.open(file_MX608V4_path),
     },
     {
-      name: "Nike Free 4.0 Flyknit Sz 13 Mens Running Shoes",
+      name: "New Balance Free 4.0 Flyknit Sz 13 Mens Running Shoes",
       sku: "MX608V5",
       price: 125,
       picture: File.open(file_MX608V5_path),
     },
     {
-      name: "Nike Flex 2015 Rn Sz 7 Mens Running Shoes",
+      name: "New Balance Flex 2015 Rn Sz 7 Mens Running Shoes",
       sku: "MX608V6",
       price: 74.99,
       picture: File.open(file_MX608V6_path),
     },
     {
-      name: "Nike Flex 2015 Rn Sz 7 Mens Running Shoes",
+      name: "New Balance Flex 2015 Rn Sz 7 Mens Running Shoes",
       sku: "MX608V6",
       price: 74.99,
       picture: File.open(file_MX608V6_path),
@@ -70,6 +72,33 @@ after :brands do
       sku: "nike4",
       price: 74.99,
       picture: File.open(file_nike4_path),
+    }
+  ])
+
+  adidas.shoes.create([
+    {
+      name: "Adidas 1",
+      sku: "adidas1",
+      price: 62.99,
+      picture: File.open(file_adidas1_path),
+    },
+    {
+      name: "Adidas 2",
+      sku: "adidas2",
+      price: 103.99,
+      picture: File.open(file_adidas2_path),
+    },
+    {
+      name: "Adidas 3",
+      sku: "adidas3",
+      price: 99.99,
+      picture: File.open(file_adidas3_path),
+    },
+    {
+      name: "Adidas 3",
+      sku: "adidas4",
+      price: 74.99,
+      picture: File.open(file_adidas4_path),
     }
   ])
 end
