@@ -6,7 +6,7 @@ class Shoe < ActiveRecord::Base
   validates :price,       presence: true, numericality: { greater_than: 0 }
 
   has_attached_file :picture,
-    styles: { thumb: ['220x120>'] },
+    styles: { thumb: ['260x260>'] },
     :default_url => "shoe/no-image.png"
   validates_attachment :picture,
     content_type: {content_type: /\Aimage\/.*\Z/},
