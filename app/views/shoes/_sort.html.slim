@@ -1,0 +1,16 @@
+.shoes-sort-container
+  .row
+    .col.m8
+      .total
+        | 0 matching products
+    .col.m4
+      .sort-by
+        span Sort by
+        = select_tag :shoe_sort, options_for_select([["DESC", "desc"], ["ASC", "asc"]], cookies[:sortby]), include_blank: "Alphabetical"
+
+  javascript:
+    $('#shoe_sort').change(function(){
+      document.cookie = "sortby=" + $(this).val() + "";
+
+      $('#new_shoe_filter').submit()
+    })

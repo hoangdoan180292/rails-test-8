@@ -5,6 +5,7 @@
         = render "filter"
       .col.m9
         = render "banner"
+        = render "sort"
         - if @shoes.present?
           #shoes
             = render partial: "shoes/listing", locals: { shoes: @shoes }
