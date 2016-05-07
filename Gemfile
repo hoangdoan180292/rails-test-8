@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'enumerize'
 gem 'paperclip'
+gem 'seedbank'
 
 group :development, :test do
   gem 'byebug'
