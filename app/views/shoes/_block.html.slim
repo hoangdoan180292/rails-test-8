@@ -1,0 +1,10 @@
+.shoes-block-container
+  .image
+    = image_tag(shoe.picture.url(:thumb), class: "responsive-img")
+  .information
+    h3 = shoe.name
+    h4 = shoe.sku
+    .price = shoe.price
+    button.waves-effect.waves-light.btn
+      i.fa.fa-shopping-cart
+      | Add to cart
