@@ -1,0 +1,17 @@
+.shoes-sort-container {
+  margin-top: 45px;
+
+  .total {
+    font-size: 16px;
+  }
+
+  .sort-by {
+    > div, span {
+      display: inline-block;
+    }
+
+    > div {
+      margin-left: 40px;
+    }
+  }
+}
