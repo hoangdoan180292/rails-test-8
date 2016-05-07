@@ -1,9 +1,11 @@
 class ShoeFilter
   include ActiveModel::Conversion
   extend  ActiveModel::Naming
-  attr_accessor :brand_ids, :min_price, :max_price
+  attr_accessor :brand_ids, :min_price, :max_price, :sort_by
 
-  def initialize(option)
+  def initialize(option, sort_by = '')
+    @sort_by          = sort_by
+    
     return if option.nil?
 
     @brand_ids        = option[:brand_ids]
@@ -19,6 +21,8 @@ class ShoeFilter
     shoes = shoes.where('price >= ?', min_price) if min_price.present?
     
     shoes = shoes.where('price <= ?', max_price) if max_price.present?
+    
+    shoes = shoes.order(name: sort_by) if sort_by.present?
     
     shoes
   end
