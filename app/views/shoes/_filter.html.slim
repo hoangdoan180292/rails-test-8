@@ -1,0 +1,9 @@
+.shoes-filter-container
+  p.title Refine by
+  .content
+    p.label Brands
+    = simple_form_for @shoe_filter, url: shoes_path, html: { method: :get }, remote: true do |f|
+      = f.collection_check_boxes :brand_ids, @brands, :first, :last
+  coffee:
+    $('input[name="shoe_filter[brand_ids][]"]').change ->
+      $(this).parents('form').submit()

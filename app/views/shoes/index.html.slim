@@ -1,0 +1,10 @@
+#shoes-index-container
+  .container
+    .row
+      .col.m3
+        = render "filter"
+      .col.m9
+        = render "banner"
+        - if @shoes.present?
+          #shoes
+            = render partial: "shoes/listing", locals: { shoes: @shoes }
