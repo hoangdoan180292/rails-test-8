@@ -1,0 +1,12 @@
+- if flash.present?
+  #system-message.modal
+    .modal-content
+      h4 Message
+      - flash.each do |type, message|
+        = simple_format message
+    .modal-footer
+      a.modal-action.modal-close.waves-effect.waves-red.btn-flat href="#!" Close
+
+  coffee:
+    if $('#system-message .modal-content p').first().text() != ''
+      $('#system-message').openModal();
