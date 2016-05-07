@@ -4,3 +4,5 @@
       - group.each do |shoe|
         .col.m4
           = render partial: "shoes/block", locals: { shoe: shoe }
+          
+  = js_will_paginate shoes, previous_label: "<i class='fa fa-chevron-left'></i>", next_label: "<i class='fa fa-chevron-right'></i>"
