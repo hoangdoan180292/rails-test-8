@@ -11,7 +11,7 @@ describe ShoeFilter do
       it 'returns list of shoes' do
         shoes = ShoeFilter.new(brand_ids: [brand_nike.id]).search
 
-        expect(shoes.size).to eq shoes_adidas.size
+        expect(shoes.size).to eq shoes_nike.size
         expect(shoes).to_not include shoes_adidas.first
       end
     end
@@ -19,7 +19,6 @@ describe ShoeFilter do
     context 'return list of shoes with min_price' do
       it 'returns list of shoes' do
         shoes = ShoeFilter.new(min_price: 20, max_price: 40).search
-        ap shoes, plain: true
 
         expect(shoes.size).to eq 3
       end
